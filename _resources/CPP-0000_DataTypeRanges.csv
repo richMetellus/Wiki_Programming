@@ -1,0 +1,18 @@
+Type,Storage Size,Value range,Examples,printf chars
+char,1 byte,-128 to 127 or 0 to 255," 'a', '\n'","%c, ""%d"""
+unsigned char,1 byte,0 to 255,-1,"%c, ""%d"""
+signed char,1 byte,-128 to 127," 'a', 97, '\n'","%c, ""%d"""
+_Bool (c only) or bool,,,"true (1 or any non-zero value), false (0),","%i, %u"
+int,2 or 4 bytes,"-32,768 to 32,767 or -2,147,483,648 to 2,147,483,647","12, -97, 0xFFE0, 0177","%i, %x, %o"
+unsigned int,2 or 4 bytes,"0 to 65,535 or 0 to 4,294,967,295","12u, 100U, 0XFFu","%i, %x, %o"
+short int,2 bytes,"-32,768 to 32,767",,
+unsigned short int,2 bytes,"0 to 65,535",,
+signed short int,2 bytes,-32768 to 32767,,
+long int,8 bytes,"-2,147,483,648 to 2,147,483,647","12L, -2001, 0xffffL","%li, %lx, %lo"
+signed long int,8 bytes,same as long int,,
+unsigned long int,8 bytes,"0 to 4,294,967,295",,
+long long int,8 bytes,-(2^63) to (2^63)-1,"0xe5e5e5e5LL, 500ll","%lli, %llx, &llo"
+unsigned long long int,8 bytes,"0 to 18,446,744,073,709,551,615","12ull, 0xffeeULL","%llu, %llx, %llo"
+float,4 bytes,,"12.34f, 3.1e-5f, 0x1.5p10,0x1P-1","%f, %e, %g, %a"
+double,8 bytes,,"12.34, 3.1e-5, 0x.1p3","%f, %e, %g, %a"
+long double,,,"12.341, 3.1e-5l","%Lf, %Le, %Lg"
