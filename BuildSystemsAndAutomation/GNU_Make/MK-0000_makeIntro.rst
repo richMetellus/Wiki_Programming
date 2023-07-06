@@ -1,3 +1,5 @@
+.. _GNU_MakeIntro:
+
 #################
 GNU Make
 #################
@@ -99,25 +101,25 @@ The files have the original contents
    
    .. tab:: main.cpp
       
-      .. literalinclude:: /Programming/_resources/GNU_Make_Examples/SimpleMakefiletut/main.cpp
+      .. literalinclude:: /Programming/_resources/GNU_Make/gnu-make-tutorials/main.cpp
          :language: c++
          :linenos:
 
    .. tab:: message.h
       
-      .. literalinclude:: /Programming/_resources/GNU_Make_Examples/SimpleMakefiletut/message.h
+      .. literalinclude:: /Programming/_resources/GNU_Make/gnu-make-tutorials/message.h
          :language: c++
          :linenos:
 
    .. tab:: message.cpp
       
-      .. literalinclude:: /Programming/_resources/GNU_Make_Examples/SimpleMakefiletut/message.cpp
+      .. literalinclude:: /Programming/_resources/GNU_Make/gnu-make-tutorials/message.cpp
          :language: c++
          :linenos:
 
    .. tab:: Makefile
       
-      .. literalinclude:: /Programming/_resources/GNU_Make_Examples/SimpleMakefiletut/Makefile
+      .. literalinclude:: /Programming/_resources/GNU_Make/gnu-make-tutorials/Makefile
          :language: bash
          :linenos:
 
@@ -130,7 +132,7 @@ This is called the `default goal`.
 * In this example it is target that is the default goal is ``output``
 * Looking at the first 2 lines:
 
-    .. literalinclude:: /Programming/_resources/GNU_Make_Examples/SimpleMakefiletut/Makefile
+    .. literalinclude:: /Programming/_resources/GNU_Make/gnu-make-tutorials/Makefile
        :language: bash
        :lines: 1-2
 

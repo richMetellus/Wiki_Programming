@@ -1,3 +1,9 @@
 [submodule "_resources/compSciIILabProjs"]
 	path = _resources/compSciIILabProjs
 	url = git@github.com:richMetellus/CompScII_DataStructureandAlgorithmLabProjects.git
+[submodule "_resources/BuildSystemsAndAutomation/CMake/cmake-tutorials"]
+	path = _resources/BuildSystemsAndAutomation/CMake/cmake-tutorials
+	url = git@github.com:richMetellus/cmake-tutorials.git
+[submodule "_resources/BuildSystemsAndAutomation/GNU_Make/gnu-make-tutorials"]
+	path = _resources/BuildSystemsAndAutomation/GNU_Make/gnu-make-tutorials
+	url = git@github.com:richMetellus/gnu-make-tutorials.git
