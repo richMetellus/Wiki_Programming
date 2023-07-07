@@ -10,7 +10,7 @@ General Programming Concepts
    :numbered:
    :maxdepth: 1
    
-   Programming/PP-*
+   Programming/PP-000*
 
 C++ and C
 --------------
@@ -21,7 +21,7 @@ C++ and C
    :numbered:
    :maxdepth: 1
    
-   Programming/C_and_C++/**
+   Programming/C_and_C++/C_CPP-000*
 
 Build Systems And Build Automation
 =====================================
@@ -35,7 +35,7 @@ GNU Make
    :numbered:
    :maxdepth: 1
    
-   Programming/BuildSystemsAndAutomation/GNU_Make/MK-0000*
+   Programming/BuildSystemsAndAutomation/GNU_Make/MK-000*
    Programming/_resources/BuildSystemsAndAutomation/GNU_Make/**
 
 
@@ -48,4 +48,4 @@ CMake
    :numbered:
    :maxdepth: 1
    
-   Programming/BuildSystemsAndAutomation/CMake/CMK-*
+   Programming/BuildSystemsAndAutomation/CMake/CMK-000*

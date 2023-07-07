@@ -23,10 +23,10 @@ What is Programming and Programming Languages
 History and Evolution of Computer Programming Languages
 ************************************************************
 
-A good essay on the history and eveloution of computer programming Languages
+A good essay on the history and evolution of computer programming Languages
 can be accessed on the 
 
-* `cs.brown.edu site <https://cs.brown.edu/~adf/programming_languages.html>`
+* `cs.brown.edu site <https://cs.brown.edu/~adf/programming_languages.html>`_
 * or `my personal copy on sharepoint <www.example.com>`_
 
 The book *Computer Science Illuminated* has an interesting chapter on the
@@ -40,7 +40,7 @@ history of computer and programming languages.
 How is A Programming Language Created
 ******************************************
 
-Programming Language creation: it takes years of reasearch, 
+Programming Language creation: it takes years of research, 
 development, and fine-tuning to create a programming language
 that is capable of executing complex operations.
 
@@ -80,8 +80,8 @@ Typical steps of creation:
 
             So programmers create tools for other programmers.
             
-            New programming languages are developped to further abstract complex
-            details and make the life of other users easiers.
+            New programming languages are developed to further abstract complex
+            details and make the life of other users easier.
 
             * Thanks to C or other higher level programming, one no longer have to 
               write code in assembly.
@@ -124,7 +124,7 @@ Typical steps of creation:
                               as a wrapper for system calls
                             
                             * glibc isn't a single .so (dynamic library) file -- there are a bunch,
-                              but libc and libm (implementent math function) are 
+                              but libc and libm (implements math function) are 
                               the most commonly-used two. 
                               All of the static and dynamic libraries are stored in /lib.
 
@@ -155,5 +155,5 @@ Summary
 References
 **********************
 
-* `Blog- How are Coputer Programming Language Created? <https://python.plainenglish.io/how-are-computer-programming-languages-created-f7941d1642e3>`_
+* `Blog- How are Computer Programming Language Created? <https://python.plainenglish.io/how-to-create-a-programming-language-9f3c89a30706>`_
 .. _[ISO/IEC14882:2011] `C++ Programming Standard <https://www.iso.org/standard/50372.htm>`_
