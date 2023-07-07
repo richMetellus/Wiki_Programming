@@ -19,7 +19,9 @@ CMake
   allows developers to specify build configurations for a wide variety of 
   platforms and build environments.
 
-* CMake is not a build system itself; it generates another system's build files.
+    .. drawio-image:: ./_images/src/cmake.drawio 
+
+* CMake is **NOT** a build system itself; it generates another system's build files.
 
     * Originally designed as a generator for various dialect of ``Makefile``
       CMake runs on most platforms, and can generate project files 
@@ -33,8 +35,9 @@ CMake
       multiple build systems, making it easier to manage and maintain complex 
       software projects.
     
-    * The project configuration parameters (key-value pairs) such as the locations of compilers, tools,
-      and dependencies can be viewed or edited by the user by running cmake-gui
+    * The project configuration parameters (key-value pairs) such as the locations 
+      of compilers, tools, and dependencies can be viewed or edited by the user 
+      by running cmake-gui
       or ccmake tools. 
 
 
