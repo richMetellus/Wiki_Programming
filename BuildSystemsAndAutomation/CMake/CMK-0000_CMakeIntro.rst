@@ -11,6 +11,7 @@ Intro
 
 What is CMake?
 
+.. _cmakeIntroSectionStart:
 
 CMake 
 
@@ -19,7 +20,7 @@ CMake
   allows developers to specify build configurations for a wide variety of 
   platforms and build environments.
 
-    .. drawio-image:: ./_images/src/cmake.drawio 
+    .. drawio-image:: /Programming/BuildSystemsAndAutomation/CMake/_images/src/cmake.drawio 
 
 * CMake is **NOT** a build system itself; it generates another system's build files.
 
@@ -47,6 +48,8 @@ CMake
     
     * You can see the supported languages by going to the `CMake documentation
       -> cmake-commands -> project section <https://cmake.org/cmake/help/latest/command/project.html>`_
+
+.. _cmakeIntroSectionEnd:
 
 CMake Lessons:
 
