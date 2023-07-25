@@ -6,7 +6,7 @@
 
 **Prompt**:
 in cmake, how to set a variable named `DTC_OVERLAY_FILE` to a value if the 
-condidtion variable string BOARD is equal to `my_board`?
+condition variable string BOARD is equal to `my_board`?
 
 **chatGPT**
 To set the variable `DTC_OVERLAY_FILE` to a specific value based on a condition 
@@ -52,3 +52,31 @@ the variable will be modified accordingly, otherwise, it will remain unchanged.
 Remember to place this code snippet in the appropriate location in your 
 CMakeLists.txt file, based on when and where you want to set the 
 `DTC_OVERLAY_FILE` variable.
+
+## Check if a cmake variable is empty 
+
+**Prompt**: 
+how to check if a cmake variable such as ZEPHYR_CURRENT_MODULE_DIR is not empty?
+
+**chatGPT**:
+
+To check if a CMake variable, such as `ZEPHYR_CURRENT_MODULE_DIR`, is not empty, 
+you can use the `IF` statement and the `NOT` keyword. Here's an example:
+
+```cmake
+if(NOT "${ZEPHYR_CURRENT_MODULE_DIR}" STREQUAL "")
+    message("ZEPHYR_CURRENT_MODULE_DIR is not empty.")
+else()
+    message("ZEPHYR_CURRENT_MODULE_DIR is empty.")
+endif()
+```
+
+In this example, we enclose the `${ZEPHYR_CURRENT_MODULE_DIR}` variable within 
+quotes to handle cases where the variable is not defined. The `STREQUAL` 
+operator is used to check if the variable is equal to an empty string. If the 
+condition evaluates to true, a message is printed indicating that 
+`ZEPHYR_CURRENT_MODULE_DIR` is not empty. Otherwise, if the condition evaluates 
+to false, a message is printed indicating that `ZEPHYR_CURRENT_MODULE_DIR` is empty.
+
+You can adjust the logic within the `if` statement to perform additional actions 
+based on whether the variable is empty or not.
