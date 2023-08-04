@@ -130,7 +130,7 @@ domain.
        concrete example we have ``HMM`` library which exposed only ``Algorithm.h`` 
        header file. ``FancyMath`` files are private and not exposed. 
        Library domain is HMM, so when you want to include public header 
-       for example Algorithm.h you do it this way: ``#inlcude <HMM/Algorithm.h>``
+       for example Algorithm.h you do it this way: ``#include <HMM/Algorithm.h>``
        instead of #include "Algorithm.h" .
 
      - More Concrete Example
@@ -305,15 +305,15 @@ Folders purpose is:
     a specific app that do specific things for one product (like a RIOC)
   * src/apps -- if you have multiple apps that might be product variant specific
 
-  * if src is like dorado p-dist and is following softare architecture then you can
+  * if src is like dorado p-dist and is following software architecture then you can
     
-    * src/<linux-controler>
+    * src/<linux-controller>
 
       * BSP <linux-bsp>
 
     * src/<fpga-controller>
 
-      * sub-comonent
+      * sub-component
 
         * motor control.c
     
@@ -380,7 +380,7 @@ variables or variableName
   program, but the memory is not allocated for them.
 
   * it helps the compiler (what type it is)
-  * in case of fuction, it tells the parameters and their types, and the return
+  * in case of function, it tells the parameters and their types, and the return
     value.
 
 :term:`Definition`
@@ -700,7 +700,7 @@ User-define Data Type:
 
 * Enumerated types:
 
-    #. ``eunum``
+    #. ``enum``
 
 
 Data-type Ranges
@@ -981,7 +981,7 @@ function should be rewritten to use pointers.
    }
 
 When we call the function by passing the address of the variable, this technique
-is known as `call by reference` in C (beginersbook.com)
+is known as *call by reference* in C (beginnersbook.com)
 
 * Pointers as function parameters: allow the function to be called by reference
 * This is useful for complex structures if we want to save time/space by passing 
@@ -1039,7 +1039,7 @@ function works with the original array
 Reference Variable as Function Parameters - Pass by Reference (C++ only)
 ----------------------------------------------------------------------------
 
-.. include:: ./CPP_commonInclude.rst
+.. include:: ./C_CPP_commonInclude.rst
    :start-after: referenceVariableWithAFunctionStart:
    :end-before:  referenceVariableWithAFunctionEnd
 
@@ -1071,7 +1071,7 @@ Comparing: Pass-by-reference vs. Pass-by pointer (C++)
 
 https://www.ibm.com/docs/en/zos/2.4.0?topic=calls-pass-by-reference-c-only
 
-.. list-table:: Passing by refence vs Passing by pointer
+.. list-table:: Passing by reference vs Passing by pointer
    :header-rows: 1
    :class: my-class
    :name: my-name
@@ -1110,7 +1110,7 @@ When to use it:
 Function Pointers
 ===================
 
-.. include:: ./CPP_commonInclude.rst
+.. include:: ./C_CPP_commonInclude.rst
    :start-after: functionPointersStart:
    :end-before:  functionPointersEnd
 
@@ -1146,7 +1146,7 @@ Array initialization
 .. collapse:: A Compilation of how to declare and initialize an array in C and or C++
    :open:
    
-   .. literalinclude:: ../_resources/CPP-0000_AllAboutArrarys.cpp
+   .. literalinclude:: ../_resources/CPP-0000_AllAboutArrays.cpp
       :language: c++
       :linenos:
       :start-after: [Array-Initializing-Section]
@@ -1188,7 +1188,7 @@ name is interpreted as the address of the first element of the array.
 Adding one to a pointer variable increases its value by the number of bytes of the type to 
 which it points.
 
-   .. literalinclude:: ../_resources/CPP-0000_AllAboutArrarys.cpp
+   .. literalinclude:: ../_resources/CPP-0000_AllAboutArrays.cpp
       :language: c++
       :linenos:
       :start-after: [Array-and-Pointers-Section]
@@ -1355,7 +1355,7 @@ To return a single-dimension array from a function, define the function in the f
 Dynamic Arrays
 =================
 
-.. include:: ./CPP_commonInclude.rst
+.. include:: ./C_CPP_commonInclude.rst
    :start-after: DynamicArraysStart:
    :end-before:  DynamicArraysEnd
 
@@ -1422,7 +1422,7 @@ Pointer Operation Visualization
 Pointer to Function
 ======================
 
-.. include:: ./CPP_commonInclude.rst
+.. include:: ./C_CPP_commonInclude.rst
    :start-after: functionPointersStart:
    :end-before:  functionPointersEnd
 
@@ -1469,7 +1469,7 @@ The regular variable and the reference are in the same scope, so it seems silly.
 Reference Variable as Function Parameters - Pass by Reference
 ===============================================================
 
-.. include:: ./CPP_commonInclude.rst
+.. include:: ./C_CPP_commonInclude.rst
    :start-after: referenceVariableWithAFunctionStart:
    :end-before:  referenceVariableWithAFunctionEnd
 
@@ -1560,7 +1560,7 @@ Difference between C Structure and C++ Structures
 Dynamic Structures
 =====================
 
-.. include:: ./CPP_commonInclude.rst
+.. include:: ./C_CPP_commonInclude.rst
    :start-after: DynamicStructureStart:
    :end-before:  DynamicStructureEnd
 
@@ -1907,14 +1907,14 @@ Additional notes regarding runtime allocated memory
 Dynamic Arrays
 =================
 
-.. include:: ./CPP_commonInclude.rst
+.. include:: ./C_CPP_commonInclude.rst
    :start-after: DynamicArraysStart:
    :end-before:  DynamicArraysEnd
 
 Dynamic Structures
 =====================
 
-.. include:: ./CPP_commonInclude.rst
+.. include:: ./C_CPP_commonInclude.rst
    :start-after: DynamicStructureStart:
    :end-before:  DynamicStructureEnd
 

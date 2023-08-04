@@ -104,6 +104,7 @@ So to make the distinction, I reserved:
       int& Task2(int x, double y);  // uses return by reference
 
 .. collapse:: More Legal and illegal const reference argument examples
+   :open:
    
    .. literalinclude:: ../_resources/CPP-0000_referenceVariablesAndFunction.cpp
       :language: c++
