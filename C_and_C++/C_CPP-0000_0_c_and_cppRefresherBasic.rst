@@ -1419,6 +1419,91 @@ Pointer Operation Visualization
        :page-index: 5
 
 
+``int* ptr_quantity``
+
+* declaring/defining a pointer of type int.
+* this will indicate to the compiler that pointer will point to a memory location
+  capable of holding a value of sizeof(int).
+
+``*ptr_quantity = a_value;``
+
+*  we are writing to the memory location pointed by ptr_quantity
+
+``a_variable = *ptr_quantity;`` 
+
+* we are reading the memory location pointer by ptr_quantity, take the value hold in
+  that memory location a assign it to ``a_variable``
+
+.. card:: Meaning of "referencing" and "dereferencing" 
+   
+    *ref*: https://stackoverflow.com/questions/14224831/meaning-of-referencing-and-dereferencing-in-c
+
+    **Referencing** means taking the address of an existing variable (using &) to 
+    set a pointer variable. In order to be valid, a pointer has to be set to 
+    the address of a variable of the same type as the pointer, without the 
+    asterisk:
+
+    .. code-block:: c 
+       
+        int  c1;
+        int* p1;
+        c1 = 5;
+        p1 = &c1;
+        //p1 references c1
+    
+    **Dereferencing** a pointer means using the * operator (asterisk character) 
+    to retrieve the value from the memory address that is pointed by the 
+    pointer.
+        .. note:: NOTE: The value stored at the address of the pointer must be 
+            a value OF THE SAME TYPE as the type of variable the pointer 
+            "points" to, but there is no guarantee this is the case unless 
+            the pointer was set correctly. The type of variable the pointer 
+            points to is the type less the outermost asterisk.
+        
+    .. code-block:: c 
+
+        int n1;
+        n1 = *p1; 
+
+    
+    **Invalid dereferencing** may or may not cause crashes:
+
+    * Dereferencing an uninitialized pointer can cause a crash
+    * Dereferencing with an invalid type cast will have the potential to cause a crash.
+    * Dereferencing a pointer to a variable that was dynamically allocated and 
+      was subsequently de-allocated can cause a crash
+    * Dereferencing a pointer to a variable that has since gone out of scope 
+      can also cause a crash.
+    
+    **Invalid referencing** is more likely to cause compiler errors than crashes, 
+    but it's not a good idea to rely on the compiler for this.
+    
+    References:
+
+    * http://www.codingunit.com/cplusplus-tutorial-pointers-reference-and-dereference-operators
+
+        .. compound:: 
+            :class: light-gray-bg 
+
+            & is the reference operator and can be read as “address of”.
+            * is the dereference operator and can be read as “value pointed by”.
+    
+    * http://www.cplusplus.com/doc/tutorial/pointers/
+
+        .. compound:: 
+            :class: light-gray-bg 
+
+            & is the reference operator    
+            * is the dereference operator
+    
+    * http://en.wikipedia.org/wiki/Dereference_operator 
+
+        .. compound:: 
+            :class: light-gray-bg 
+
+            The dereference operator * is also called the indirection operator.
+
+
 Pointer to Function
 ======================
 
