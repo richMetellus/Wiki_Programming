@@ -1987,7 +1987,8 @@ In C, runtime allocated memory can be freed using the dynamic memory allocation 
 Additional notes regarding runtime allocated memory
 
 * Ordinary variable have their values stored in a memory region called the `stack`, 
-* memory allocated with ``new`` have their values stored in a memory region called the `heap``
+* memory allocated with ``new`` have their values stored in a memory region called 
+  the `heap`
 
 Dynamic Arrays
 =================

@@ -2803,3 +2803,57 @@ get the associated string for a given enum constant.
 
 Both approaches allow you to associate strings with enum constants in C, but 
 you need to manage the association manually.
+
+## The ** in pointer
+
+
+In the function signature:
+
+```c
+int data_get_groupId(const int id, tGrp2** groupID)
+```
+
+The `tGrp2** groupID` parameter is a pointer to a pointer to a `tGrp2` structure. 
+This double pointer (`**`) is used for the following purpose:
+
+1. **Pass by Reference**: When you pass a pointer to a function, you're 
+effectively passing a reference to the original data, allowing the function to 
+modify the original data. In this case, `tGrp2** groupID` allows the function 
+to modify the pointer itself.
+
+2. **Dynamic Memory Allocation**: It is often used when you want a function to 
+allocate memory dynamically for a data structure and return a pointer to that 
+allocated memory to the caller. In this case, `tGrp2**` is used to hold the 
+address of the allocated memory.
+
+Here's a typical usage scenario:
+
+```c
+int main() {
+    tGrp2* myGroup = NULL;  // Declare a pointer to tGrp2
+
+    // Call the function to allocate and initialize tGrp2
+    int result = data_get_groupId(123, &myGroup);
+
+    if (result == 0) {
+        // Access the allocated tGrp2 through myGroup
+        printf("Group ID: %u\n", myGroup->groupId);
+
+        // Don't forget to free the memory when done
+        free(myGroup);
+    } else {
+        printf("Error: Unable to allocate memory for tGrp2.\n");
+    }
+
+    return 0;
+}
+```
+
+In this example, `data_get_groupId` allocates memory dynamically for a `tGrp2` 
+structure and assigns the address of that memory to `*groupID` (which is a 
+pointer to `tGrp2*`). This allows you to access and modify the allocated 
+structure in the calling function.
+
+The double pointer (`**`) is necessary because you need to modify the pointer 
+itself to make it point to the newly allocated memory, and not just modify 
+the contents of the structure it points to.
