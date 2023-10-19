@@ -610,6 +610,85 @@ code by introducing descriptive aliases for complex types, reducing the need
 for repetitive and verbose type declarations.
 
 
+## Macro value comparison 
+
+**prompt**
+
+correct this code 
+```c
+#if _USE_HSE_CLK_CONFIG == TRUE && defined(_USE_1MBIT_PER_SEC_BIT_RATE)
+	SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+#elif _USE_HSE_CLK_CONFIG == TRUE && NOT defined(_USE_1MBIT_PER_SEC_BIT_RATE)
+	SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+```
+
+**chatGPT3.5**
+To achieve the conditional check in C preprocessor directives, you should use 
+`#ifndef` to check if a macro is not defined, rather than `NOT defined`. 
+The corrected code looks like this:
+
+```c
+#if _USE_HSE_CLK_CONFIG == TRUE && defined(_USE_1MBIT_PER_SEC_BIT_RATE)
+    SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+#elif _USE_HSE_CLK_CONFIG == TRUE && !defined(_USE_1MBIT_PER_SEC_BIT_RATE)
+    SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+#endif
+```
+
+In this corrected code:
+
+- `defined(_USE_1MBIT_PER_SEC_BIT_RATE)` checks if the macro is defined.
+- `!defined(_USE_1MBIT_PER_SEC_BIT_RATE)` checks if the macro is not defined.
+
+I also included the `#endif` to close the conditional block properly.
+
+Please note that both branches of the `#if` condition are the same, which means 
+that the code behaves identically for the two conditions. If that's 
+your intent, you can simplify the code to:
+
+```c
+#if _USE_HSE_CLK_CONFIG == TRUE
+    SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+#endif
+```
+
+This code will call `SystemClock_Config_HSE` when `_USE_HSE_CLK_CONFIG` is `TRUE` 
+and will not perform any action otherwise.
+
+**prompt2**
+
+correct this code 
+```c
+#if _USE_HSE_CLK_CONFIG == TRUE && if _USE_1MBIT_PER_SEC_BIT_RATE == TRUE
+	SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+#elif _USE_HSE_CLK_CONFIG == TRUE &&  _USE_1MBIT_PER_SEC_BIT_RATE  != TRUE
+	SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+```
+
+**chatGPT3.5**
+
+In C preprocessor directives, you should use `#if` and `#elif` to perform 
+conditional checks, and you don't need the `if` keyword within those directives.
+Also, for comparing macro values, you can use the `==` operator. Here's the corrected code:
+
+```c
+#if _USE_HSE_CLK_CONFIG == TRUE && _USE_1MBIT_PER_SEC_BIT_RATE == TRUE
+    SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+#elif _USE_HSE_CLK_CONFIG == TRUE && _USE_1MBIT_PER_SEC_BIT_RATE != TRUE
+    SystemClock_Config_HSE(SYS_CLOCK_FREQ_50_MHZ);
+#endif
+```
+
+In this corrected code:
+
+- `#if` and `#elif` are used to perform conditional checks.
+- `_USE_HSE_CLK_CONFIG == TRUE` checks if `_USE_HSE_CLK_CONFIG` is equal to `TRUE`.
+- `_USE_1MBIT_PER_SEC_BIT_RATE == TRUE` checks if `_USE_1MBIT_PER_SEC_BIT_RATE` is equal to `TRUE`.
+- `_USE_1MBIT_PER_SEC_BIT_RATE != TRUE` checks if `_USE_1MBIT_PER_SEC_BIT_RATE` is not equal to `TRUE`.
+
+This code now correctly checks the conditions and calls `SystemClock_Config_HSE` 
+based on the values of `_USE_HSE_CLK_CONFIG` and `_USE_1MBIT_PER_SEC_BIT_RATE`.
+
 ## Software Versioning
 
 
@@ -981,6 +1060,7 @@ one of the enum values. This allows you to use the macro in your code as if it
 were that enum value. However, note that the macro itself doesn't have a 
 specific type or storage location; it's just a textual replacement done by 
 the preprocessor.
+
 
 ### Global array of contant, future initialization 
 
