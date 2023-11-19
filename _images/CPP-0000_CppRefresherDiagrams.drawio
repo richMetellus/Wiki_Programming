@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="7">
     <diagram id="CLGKrXk12_oF3Jadqq9M" name="DatatypeInCandC++">
-        <mxGraphModel dx="1245" dy="583" grid="1" gridSize="3" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#B3B3B3" math="0" shadow="0">
+        <mxGraphModel dx="494" dy="445" grid="1" gridSize="3" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#B3B3B3" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -335,7 +335,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="HWsJm14dr2NXBmhvnAX2" name="ForLoopFlowChart">
-        <mxGraphModel dx="1245" dy="1683" grid="1" gridSize="3" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#B3B3B3" math="0" shadow="0">
+        <mxGraphModel dx="494" dy="1545" grid="1" gridSize="3" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#B3B3B3" math="0" shadow="0">
             <root>
                 <mxCell id="9omk5bRNVr0FHva6riid-0"/>
                 <mxCell id="9omk5bRNVr0FHva6riid-1" parent="9omk5bRNVr0FHva6riid-0"/>
